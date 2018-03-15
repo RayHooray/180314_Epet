@@ -100,12 +100,12 @@
             </a>
           </li>
         </ul>
-        <div class="fixed_img">
-          <img src="../../common/images/b611670706f71f0ba6937083d201996e.jpg" alt="">
-        </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
       </section>
+      <div class="fixed_img">
+        <img src="../../common/images/b611670706f71f0ba6937083d201996e.jpg" alt="">
+      </div>
       <section class="mainNav">
         <ul class="mainNavContainer">
           <li class="mainNavItem">
@@ -230,7 +230,8 @@
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+  import Swiper from 'swiper'
+  import '../../../node_modules/swiper/dist/css/swiper.css'
   export default {
     data () {
       return {
@@ -242,8 +243,14 @@
         this.isShow = true
       }
     },
-    computed: {
-
+    mounted () {
+          new Swiper('.swiper-container',{
+            autoplay:true,
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+            }
+          })
     }
   }
 </script>
@@ -254,7 +261,7 @@
     top 0
     left 0
     right 0
-    z-index 1
+    z-index 3
     &.on
       display none
     .relation_link
@@ -273,7 +280,7 @@
     position fixed
     top 55px
     width 100%
-    z-index 1
+    z-index 3
     &.up
       top 0
     .option
@@ -326,10 +333,10 @@
             >img
               display block
               width 100%
-      .fixed_img
+    .fixed_img
+      width 100%
+      >img
         width 100%
-        >img
-          width 100%
     .mainNav
       width 100%
       .mainNavContainer
