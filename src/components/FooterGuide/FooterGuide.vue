@@ -38,6 +38,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/styuls/mixins.styl"
   .FooterGuide
+    background #ffffff
     height 55px
     position fixed
     bottom 0
