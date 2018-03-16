@@ -13,8 +13,8 @@
         <div class="footer_item shopCart" :class="{on: isCurrent('/shopcart')}">
         </div>
       </li>
-      <li @click="goto('/mine')">
-        <div class="footer_item mine" :class="{on: isCurrent('/mine')}">
+      <li @click="goto('/login')">
+        <div class="footer_item mine" :class="{on: isCurrent('/login')}">
         </div>
       </li>
     </ul>

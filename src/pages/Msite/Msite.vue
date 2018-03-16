@@ -187,36 +187,61 @@
                 <li class="marketing_goods_item">
                   <a href="#">
                     <img src="../../common/images/a75663e15423ece1ef9d0e908a15e9c2.jpg" alt="">
-                    <div></div>
-                    <p></p>
+                    <div class="price">
+                      <span>¥</span>
+                      <span>1.00</span>
+                    </div>
+                    <div class="save_money">
+                      <span>省9.00</span>
+                    </div>
                   </a>
                 </li>
                 <li class="marketing_goods_item">
                   <a href="#">
                     <img src="../../common/images/108b7fff432b4b815b121ea94936e639.jpg" alt="">
-                    <div></div>
-                    <p></p>
+                    <div class="price">
+                      <span>¥</span>
+                      <span>2.99</span>
+                    </div>
+                    <p class="save_money">
+                      <span>省26.91</span>
+                    </p>
                   </a>
                 </li>
                 <li class="marketing_goods_item">
                   <a href="#">
                     <img src="../../common/images/61c905bd1ab6b8511a37e5a009c44cbc.jpg" alt="">
-                    <div></div>
-                    <p></p>
+                    <div class="price">
+                      <span>¥</span>
+                      <span>9.92</span>
+                    </div>
+                    <p class="save_money">
+                      <span>省8.28</span>
+                    </p>
                   </a>
                 </li>
                 <li class="marketing_goods_item">
                   <a href="#">
                     <img src="../../common/images/0d8c8914019ac2d840ddc0db3ab64c1e.jpg" alt="">
-                    <div></div>
-                    <p></p>
+                    <div class="price">
+                      <span>¥</span>
+                      <span>2.00</span>
+                    </div>
+                    <p class="save_money">
+                      <span>省18.00</span>
+                    </p>
                   </a>
                 </li>
                 <li class="marketing_goods_item">
                   <a href="#">
                     <img src="../../common/images/034b6c4c8fe90c8ef7bdc5816dd0f72d.jpg" alt="">
-                    <div></div>
-                    <p></p>
+                    <div class="price">
+                      <span>¥</span>
+                      <span>54.40</span>
+                    </div>
+                    <p class="save_money">
+                      <span>省489.60</span>
+                    </p>
                   </a>
                 </li>
               </ul>
@@ -224,7 +249,210 @@
           </div>
         </div>
       </section>
-      <div></div>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/f1b7fefaf2e0a3b01498658788d75fbd.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <a href="#">
+              <img src="../../common/images/081c4aec9c8c81fa8dcb5bb9a63ddac5.gif" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/02cdfda794ee4cc90e0e39462e17d49d.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <ul class="vip_privilege">
+              <li class="vip_privilege_item">
+                <a href="#">
+                  <img src="../../common/images/go_001.jpg" alt="">
+                </a>
+              </li>
+              <li class="vip_privilege_item">
+                <a href="#">
+                  <img src="../../common/images/go_002.jpg" alt="">
+                </a>
+              </li>
+              <li class="vip_privilege_item">
+                <a href="#">
+                  <img src="../../common/images/go_003.jpg" alt="">
+                </a>
+              </li>
+              <li class="vip_privilege_item">
+                <a href="#">
+                  <img src="../../common/images/go_004.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/f1b7fefaf2e0a3b01498658788d75fbd.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <div class="group_banner">
+              <ul class="group_buy_ten_percent">
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto01.jpg" alt="">
+                  </a>
+                </li>
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto02.jpg" alt="">
+                  </a>
+                </li>
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto03.jpg" alt="">
+                  </a>
+                </li>
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto04.jpg" alt="">
+                  </a>
+                </li>
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto05.jpg" alt="">
+                  </a>
+                </li>
+                <li class="group_buy_ten_percent_item">
+                  <a href="#">
+                    <img src="../../common/images/auto06.jpg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/dapaihaohuo.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <a href="#">
+              <img src="../../common/images/081c4aec9c8c81fa8dcb5bb9a63ddac5.gif" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/zuican.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <a href="#">
+              <img src="../../common/images/zuicanimg.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/tebie.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <div class="special_mar">
+              <div class="left">
+                <a href="#">
+                  <img src="../../common/images/chaopinyushou.jpg" alt="">
+                </a>
+              </div>
+              <div class="right">
+                <div class="top">
+                  <a href="#">
+                    <img src="../../common/images/chaopinshipin.jpg" alt="">
+                  </a>
+                </div>
+                <div class="bottom">
+                  <a href="#">
+                    <img src="../../common/images/mengzhuahaohuo.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="marketing_container">
+          <div class="marketing_header">
+            <img src="../../common/images/tese.jpg" alt="">
+          </div>
+          <div class="marketing_content">
+            <div class="tese_area">
+              <ul class="tese_area_list">
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/EpetInternational.jpg" alt="">
+                  </a>
+                </li>
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/EpetFish.jpg" alt="">
+                  </a>
+                </li>
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/NewPet.jpg" alt="">
+                  </a>
+                </li>
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/offSale.jpg" alt="">
+                  </a>
+                </li>
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/pinpaitemai.jpg" alt="">
+                  </a>
+                </li>
+                <li class="tese_item">
+                  <a href="#">
+                    <img src="../../common/images/petCloth.jpg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statement">
+        <div class="about_something">
+          <span>
+            <a href="#">触屏版</a>
+          </span>
+          <span>
+            <a href="#">手机客户端</a>
+          </span>
+          <span>
+            <a href="#">关于我们</a>
+          </span>
+          <span>
+            <a href="#">联系我们</a>
+          </span>
+        </div>
+        <div>
+          <span>
+            © wap.epet.com 版权：重庆易宠科技有限公司
+          </span>
+        </div>
+      </section>
+      <div class="space"></div>
     </main>
   </div>
 </template>
@@ -356,6 +584,9 @@
           >img
             width 100%
         .marketing_content
+          >a
+            >img
+              width 100%
           .marketing_msg
             box-sizing border-box
             padding 5px
@@ -385,4 +616,92 @@
                     width 12px
           .marketing_goods
             width 100%
+            overflow hidden
+            .marketing_goods_list
+              width 145%
+              display flex
+              >li
+                width 20%
+                height 100%
+                >a
+                  background #ffffff
+                  display block
+                  width 100%
+                  height 100%
+                  >img
+                    width 100%
+                  .price
+                    margin 10px 0
+                    display flex
+                    color #ce3c39
+                    font-size 14px
+                    justify-content center
+                  .save_money
+                    display flex
+                    font-size 14px
+                    justify-content center
+          .vip_privilege
+            width 100%
+            display flex
+            flex-wrap wrap
+            .vip_privilege_item
+              width 50%
+              >a
+                >img
+                  width 100%
+          .group_banner
+            width 100%
+            overflow hidden
+            .group_buy_ten_percent
+              width 600%
+              display flex
+              .group_buy_ten_percent_item
+                width 100%
+                >a
+                  >img
+                    width 100%
+
+
+          .special_mar
+            background #000000
+            width 100%
+            display flex
+            >div
+              width 50%
+              &.left
+                >a
+                  >img
+                    width 100%
+              &.right
+                display flex
+                flex-direction column
+                >div
+                  height 50%
+                  &.top
+                    >a
+                      >img
+                        width 100%
+                  &.bottom
+                    >a
+                      >img
+                        width 100%
+          .tese_area
+            width 100%
+            .tese_area_list
+              width 100%
+              display flex
+              flex-wrap wrap
+              .tese_item
+                width 50%
+                >a
+                  width 100%
+                  >img
+                    width 100%
+    .statement
+      font-size 14px
+      box-sizing content-box
+      .about_something
+        pading 15px 0 5px
+    .space
+      height 55px
 </style>
