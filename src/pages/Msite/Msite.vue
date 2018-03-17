@@ -32,39 +32,9 @@
       <nav class="nav">
         <div class="navContainer">
           <ul class="navItems">
-            <li>
+            <li v-for="(menu, index) in menus" :key="index">
               <a href="#">
-                <span>首页</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>狗狗主粮</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>服饰城</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>医疗保健</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>零食玩具</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>日用外出</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>美容香波</span>
+                <span>{{menu.menu_name}}</span>
               </a>
             </li>
           </ul>
@@ -72,31 +42,11 @@
       </nav>
     </header>
     <main class="main" :class="{up: isShow}">
-      <section class="swiper-container">
+      <section class="swiper-container" ref="lunboSwiper">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide">
+          <li class="swiper-slide"  v-for="(lunBo, index) in lunBos[0]" :key="index">
             <a href="#">
-              <img src="../../common/images/369bb47c593f6944600ffd807bad927d.jpg" alt="">
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <img src="../../common/images/434b229e7787d829b3d184b3589b1f4b.jpg" alt="">
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <img src="../../common/images/6814c3e5ea5473b8c7b07bf0cbe0472d.jpg" alt="">
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <img src="../../common/images/8487a490b5541a4154f57000db9c3193.jpg" alt="">
-            </a>
-          </li>
-          <li class="swiper-slide">
-            <a href="#">
-              <img src="../../common/images/22878e4e3dfd9fb615efbdd8204f597c.jpg" alt="">
+              <img :src="lunBo.image" alt="">
             </a>
           </li>
         </ul>
@@ -182,9 +132,9 @@
                 </div>
               </div>
             </div>
-            <div class="marketing_goods">
-              <ul class="marketing_goods_list">
-                <li class="marketing_goods_item">
+            <div class="marketing_goods swiper-container" ref="navCrossWise">
+              <ul class="marketing_goods_list swiper-wrapper">
+                <li class="marketing_goods_item swiper-slide">
                   <a href="#">
                     <img src="../../common/images/a75663e15423ece1ef9d0e908a15e9c2.jpg" alt="">
                     <div class="price">
@@ -194,54 +144,6 @@
                     <div class="save_money">
                       <span>省9.00</span>
                     </div>
-                  </a>
-                </li>
-                <li class="marketing_goods_item">
-                  <a href="#">
-                    <img src="../../common/images/108b7fff432b4b815b121ea94936e639.jpg" alt="">
-                    <div class="price">
-                      <span>¥</span>
-                      <span>2.99</span>
-                    </div>
-                    <p class="save_money">
-                      <span>省26.91</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="marketing_goods_item">
-                  <a href="#">
-                    <img src="../../common/images/61c905bd1ab6b8511a37e5a009c44cbc.jpg" alt="">
-                    <div class="price">
-                      <span>¥</span>
-                      <span>9.92</span>
-                    </div>
-                    <p class="save_money">
-                      <span>省8.28</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="marketing_goods_item">
-                  <a href="#">
-                    <img src="../../common/images/0d8c8914019ac2d840ddc0db3ab64c1e.jpg" alt="">
-                    <div class="price">
-                      <span>¥</span>
-                      <span>2.00</span>
-                    </div>
-                    <p class="save_money">
-                      <span>省18.00</span>
-                    </p>
-                  </a>
-                </li>
-                <li class="marketing_goods_item">
-                  <a href="#">
-                    <img src="../../common/images/034b6c4c8fe90c8ef7bdc5816dd0f72d.jpg" alt="">
-                    <div class="price">
-                      <span>¥</span>
-                      <span>54.40</span>
-                    </div>
-                    <p class="save_money">
-                      <span>省489.60</span>
-                    </p>
                   </a>
                 </li>
               </ul>
@@ -458,9 +360,13 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
   import Swiper from 'swiper'
   import '../../../node_modules/swiper/dist/css/swiper.css'
   export default {
+    // props: {
+    //   lunBos: Array
+    // },
     data () {
       return {
         isShow: false
@@ -471,14 +377,34 @@
         this.isShow = true
       }
     },
-    mounted () {
-          new Swiper('.swiper-container',{
-            autoplay:true,
+    watch: {
+      lunBos() {
+        this.$nextTick(() => {
+          let swiper = new Swiper(this.$refs.lunboSwiper, {
+            autoplay: {
+              delay: 1500,
+              disableOnInteraction: false,
+            },
             loop: true,
+            preventClicks: false,
             pagination: {
-              el: '.swiper-pagination',
+              el: '.swiper-pagination'
             }
           })
+
+          let swiper_static = new Swiper(this.$refs.navCrossWise,{
+            loop: true,
+            preventClicks: false,
+          })
+        })
+      }
+    },
+    mounted() {
+      this.$store.dispatch('getMenus')
+      this.$store.dispatch('getLunbos')
+    },
+    computed: {
+      ...mapState(['menus', 'lunBos'])
     }
   }
 </script>
@@ -539,6 +465,7 @@
         .navItems
           width 131%
           display flex
+          justify-content space-around
           li
             margin 10px 10px
             font-size 14px
@@ -551,10 +478,8 @@
       top 90px
     .swiper-container
       width 100%
-      overflow hidden
       .swiper-wrapper
-        width 500%
-        display flex
+        width 100%
         .swiper-slide
           width 100%
           >a
@@ -616,10 +541,8 @@
                     width 12px
           .marketing_goods
             width 100%
-            overflow hidden
-            .marketing_goods_list
-              width 145%
-              display flex
+            .marketing_goods_listmn
+              width 100%
               >li
                 width 20%
                 height 100%

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Category from '../pages/Category/Category'   //分类页面
-import GoodsList from '../pages/GoodsList/GoodsList'
+import GoodsDetails from '../pages/GoodsDetails/GoodsDetails'
 import Login from '../pages/Login/Login'
 import Msite from '../pages/Msite/Msite'
 import ShopCart from '../pages/ShopCart/ShopCart'
@@ -19,19 +19,31 @@ export default new VueRouter({
     },
     {
       path: '/msite',
-      component: Msite
+      component: Msite,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/goodslist',
-      component: GoodsList
+      component: GoodsDetails,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/category',
-      component: Category
+      component: Category,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/shopcart',
-      component: ShopCart
+      component: ShopCart,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/login',
