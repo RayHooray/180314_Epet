@@ -1,0 +1,46 @@
+{
+  "msg":"",
+  "code":"succeed",
+  "login_status":0,
+  "mall_uid":"epet_0",
+  "mall_user":"",
+  "sys_time":1521290496,
+  "hash":"",
+  "epet_site":"epet",
+  "topadv":{
+
+  },
+  "show_history":0,
+  "cate_list":[
+    {
+      "title":"狗狗周边",
+      "rigth_img":{
+        "image":"https://static.epetbar.com/static_wap/appmall/lib/goods/cate_right_img.png",
+        "target":{
+          "mode":"goods_list",
+          "param":"cateid:3895"
+        },
+        "img_size":"138x30"
+      },
+      "type":0,
+      "flag_icon":"",
+      "list":[
+        {
+          "id_param":"cateid_4004",
+          "name":"生活用品",
+          "photo":"https://img2.epetbar.com/nowater/cates/2014-03/24/c6a56f40c0f3a28fadf814a7bb3d1a61.jpg"
+        },
+        {
+          "id_param":"cateid_4286",
+          "name":"18线小咖",
+          "photo":"https://img2.epetbar.com/nowater/2017-05/05/10/9a6b79d4493be4f98e5a9dd905eb4489.png"
+        },
+        {
+          "id_param":"cateid_4294",
+          "name":"E宠周边",
+          "photo":"https://img2.epetbar.com/nowater/2017-05/05/12/a298840ed433d9ca577663834ccf5d58.jpg"
+        }
+      ]
+    }
+  ]
+}

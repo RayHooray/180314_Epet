@@ -1,7 +1,8 @@
 import {
   RECEIVE_MENUS,
   RECEIVE_LUNBOS,
-  RECEIVE_TITLES
+  RECEIVE_TITLES,
+  RECEIVE_VIP_IMGS
 } from "./mutations-type";
 
 export default {
@@ -13,5 +14,8 @@ export default {
   },
   [RECEIVE_TITLES] (state, {titles}) {
     state.titles = titles
+  },
+  [RECEIVE_VIP_IMGS] (state, {vipImgs}) {
+    state.vipImgs = vipImgs
   }
 }

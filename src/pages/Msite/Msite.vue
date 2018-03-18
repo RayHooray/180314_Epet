@@ -58,54 +58,9 @@
       </div>
       <section class="mainNav">
         <ul class="mainNavContainer">
-          <li class="mainNavItem">
+          <li class="mainNavItem" v-for="(title, index) in titles" :key="index">
             <a href="#">
-              <img src="../../common/images/001.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/002.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/003.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/004.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/005.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/006.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/007.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/008.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/009.jpg" alt="">
-            </a>
-          </li>
-          <li class="mainNavItem">
-            <a href="#">
-              <img src="../../common/images/010.jpg" alt="">
+              <img :src="title.image" alt="">
             </a>
           </li>
         </ul>
@@ -170,24 +125,9 @@
           </div>
           <div class="marketing_content">
             <ul class="vip_privilege">
-              <li class="vip_privilege_item">
+              <li class="vip_privilege_item" v-for="(vipimg, index) in vipImgs" :key="index">
                 <a href="#">
-                  <img src="../../common/images/go_001.jpg" alt="">
-                </a>
-              </li>
-              <li class="vip_privilege_item">
-                <a href="#">
-                  <img src="../../common/images/go_002.jpg" alt="">
-                </a>
-              </li>
-              <li class="vip_privilege_item">
-                <a href="#">
-                  <img src="../../common/images/go_003.jpg" alt="">
-                </a>
-              </li>
-              <li class="vip_privilege_item">
-                <a href="#">
-                  <img src="../../common/images/go_004.jpg" alt="">
+                  <img :src="vipimg.image" alt="">
                 </a>
               </li>
             </ul>
@@ -402,9 +342,11 @@
     mounted() {
       this.$store.dispatch('getMenus')
       this.$store.dispatch('getLunbos')
+      this.$store.dispatch('getTitle')
+      this.$store.dispatch('getVipImgs')
     },
     computed: {
-      ...mapState(['menus', 'lunBos'])
+      ...mapState(['menus', 'lunBos', 'titles','vipImgs'])
     }
   }
 </script>

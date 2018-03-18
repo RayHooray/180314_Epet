@@ -7,6 +7,9 @@ import Login from '../pages/Login/Login'
 import Msite from '../pages/Msite/Msite'
 import ShopCart from '../pages/ShopCart/ShopCart'
 
+import Sort from '../pages/Category/Sort/Sort'
+import Brand from '../pages/Category/Brand/Brand'
+
 
 Vue.use(VueRouter)
 
@@ -34,9 +37,26 @@ export default new VueRouter({
     {
       path: '/category',
       component: Category,
-      meta: {
-        showFooter: true
-      }
+      children: [
+        {
+          path: '/category/sort',
+          component: Sort,
+          meta: {
+            showFooter: true
+          }
+        },
+        {
+          path: '/category/brand',
+          component: Brand,
+          meta: {
+            showFooter: true
+          }
+        },
+        {
+          path: '',
+          redirect: '/category/sort'
+        }
+      ]
     },
     {
       path: '/shopcart',
@@ -48,6 +68,6 @@ export default new VueRouter({
     {
       path: '/login',
       component: Login
-    }
+    },
   ]
 })

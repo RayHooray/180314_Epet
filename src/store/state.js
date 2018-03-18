@@ -1,5 +1,6 @@
 export default {
   menus: [],
   lunBos: [],
-  titles: []
+  titles: [],
+  vipImgs: []
 }
