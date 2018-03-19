@@ -39,22 +39,20 @@ export default new VueRouter({
       component: Category,
       children: [
         {
-          path: '/category/sort',
+          path: 'sort',
           component: Sort,
           meta: {
             showFooter: true
           }
         },
         {
-          path: '/category/brand',
+          path: 'brand',
           component: Brand,
-          meta: {
-            showFooter: true
-          }
+
         },
         {
           path: '',
-          redirect: '/category/sort'
+          redirect: 'sort'
         }
       ]
     },

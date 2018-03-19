@@ -2,10 +2,8 @@
   <div class="loginContainer">
     <header class="header">
      <div class="header_top">
-       <span class="back">
-         <a href="#">
+       <span class="back" @click="$router.back('/msite')">
            <img src="../../common/images/login/back.png" alt="">
-         </a>
        </span>
        <span>
          <a href="#">
@@ -100,6 +98,9 @@
     methods: {
       setLoginMethod (LoginMethod) {
         this.LoginMethod = LoginMethod
+      },
+      test () {
+        console.log(111)
       }
     }
   }
@@ -110,6 +111,7 @@
   .header
     box-sizing border-box
     position relative
+    top 0
     height 180px
     width 100%
     background url("../../common/images/login/d6aa601c1a4b5789b776f18261a960f6.png") no-repeat
@@ -120,9 +122,8 @@
       .back
         width 20px
         height 20px
-        >a
-          >img
-            width 100%
+        >img
+          width 100%
       >span
         margin 15px 10px
         >a

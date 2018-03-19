@@ -6,7 +6,7 @@
         </div>
       </li>
       <li @click="goto('/category')">
-        <div class="footer_item category" :class="{on: isCurrent('/category')}">
+        <div class="footer_item category" :class="{on: isCurrent('/category')||isCurrent('/category/sort')||isCurrent('/category/brand')}">
         </div>
       </li>
       <li @click="goto('/shopcart')">
@@ -25,7 +25,7 @@
   export default {
     methods: {
       goto(path) {
-        this.$router.replace(path)
+        this.$router.push(path)
       },
       isCurrent(path) {
         return this.$route.path === path
@@ -38,6 +38,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/styuls/mixins.styl"
   .FooterGuide
+    z-index 10000
     background #ffffff
     height 55px
     position fixed

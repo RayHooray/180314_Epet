@@ -11,8 +11,8 @@
         <img src="../../common/images/category/search-ico.png" alt="">
       </a>
     </header>
-    <Sort :class="{on: isShow}"/>
-    <Brand :class="{on: !isShow}"/>
+    <Sort class="sort_cube" :class="{on: isShow}"/>
+    <Brand class="brand_area" :class="{on: !isShow}"/>
   </div>
 </template>
 
@@ -29,6 +29,7 @@
     methods: {
       Tab (isShow) {
         this.isShow = isShow
+        console.log(this.isShow)
       }
     },
 
@@ -41,8 +42,13 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
 .category
-  width 100%
+  position relative
+  top 0
+  left 0
+  right 0
+  overflow hidden
   .header
+    background #ffffff
     padding 0 15px
     position fixed
     top 0
@@ -79,4 +85,13 @@
       height 14px
       img
         width 100%
+  .sort_cube
+    display none
+    width 100%
+    &.on
+      display block
+  .brand_area
+    display none
+    &.on
+      display block
 </style>
